@@ -1,0 +1,18 @@
+$font-color:red;
+
+:host{
+  display:block;
+  margin-top:1rem;
+}
+
+.info-text{
+  text-align: center;
+}
+
+p {
+  color: $font-color;
+}
+
+mat-spinner{
+  margin: auto;
+}
