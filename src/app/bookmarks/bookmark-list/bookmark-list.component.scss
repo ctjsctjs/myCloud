@@ -1,0 +1,86 @@
+@import "../../../scss/main.scss";
+
+.grid {
+    display: grid;
+    grid-gap: 4em 2em;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    padding: 1em;
+}
+  
+  .grid::before {
+    content: '';
+    width: 0;
+    padding-bottom: 100%;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+  }
+  
+  .grid > *:first-child {
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+  }
+  
+  /* Just to make the grid visible */
+  
+  // .grid > * {
+  //   border: 1px #efefef solid;
+  //   border-radius: 1em;
+  // }
+
+  .bookmark{
+    position: relative;
+    border: 1px #efefef solid;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 200ms;
+
+    &:hover{
+      box-shadow: 0 6px 12px rgba(0,0,0,0.01), 0 6px 12px rgba(0,0,0,0.04);
+      border:1px solid $salmon;
+    }
+  }
+
+  .bookmark a {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+  }
+
+  .bookmark-name{
+    position: absolute;
+    bottom:-3em;
+    left:0;
+    text-align: center;
+    width:100%;
+    color:#525252;
+    font-size:0.8em;
+    height:2em;
+  }
+
+  .bookmark-favicon{
+    vertical-align: middle;
+  }
+
+  .bookmark-delete{
+    position: absolute;
+    top: 0.2em;
+    right:0em;
+    cursor: pointer;
+    color:#efefef;
+
+    :hover{
+      color: $salmon;
+    }
+
+    mat-icon{
+      font-size:1em;
+    }
+  }
+
+
+ 

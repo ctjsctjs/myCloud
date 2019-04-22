@@ -1,0 +1,8 @@
+<nav>
+  <ul>
+    <li><a><mat-icon>home</mat-icon></a></li>
+    <li *ngFor="let desktop of desktops"><a><mat-icon>desktop_windows</mat-icon></a></li>
+    <li><a (click)="onSaveDesktop()"><mat-icon>add</mat-icon></a></li>
+    <li><a (click)="onLogout()"><mat-icon>exit_to_app</mat-icon></a></li>
+  </ul>
+</nav>

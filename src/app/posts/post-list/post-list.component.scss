@@ -1,18 +1,53 @@
-$font-color:red;
+@import "../../../scss/main.scss";
 
 :host{
   display:block;
-  margin-top:1rem;
 }
 
 .info-text{
   text-align: center;
 }
 
-p {
-  color: $font-color;
+.noPost-error {
+  color: $font-error;
 }
 
 mat-spinner{
   margin: auto;
+}
+
+.msg-cont{
+  width: 100%;
+  position: relative;
+  display:block;
+  border-bottom: 1px solid $gallery;
+}
+
+.row{
+  display:flex;
+  padding: 1em;
+  justify-content: space-between;
+}
+
+.msgAction-cont a{
+  color: $mirage;
+  cursor: pointer;
+}
+
+.msgAction-cont a mat-icon{
+  font-size: 1em;
+}
+
+.msgAction-cont a:hover{
+  color: $salmon;
+}
+
+.msg-title{
+  font-size: 1em;
+  color: $mine-shaft;
+}
+
+.msgBody{
+  font-size: 0.8em;
+  color: $emporor;
 }

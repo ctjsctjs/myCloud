@@ -1,0 +1,27 @@
+//Variables for colors
+$emporor: #525252;
+$mine-shaft: #222222;
+$mirage:#1a2538;
+$cod-gray:#1a2538;
+$line: #dfdfdf;
+$gallery: #efefef;
+$off-white: #fafafa;
+$white: #ffffff;
+
+$salmon:#ff7163;
+$font-error:red;
+
+//Variables for font-sizes
+$font-body: 1em;
+
+//Variables for breakpoints
+$breakpoints: (
+  'phone': (min-width: 480px),
+  'tablet': (min-width: 960px),
+  'desktop': (min-width: 1366px),
+);
+
+$scrollbar-width: 20px;
+$navbar-width: 60px;
+$padding-width: 24px;
+$module-padding-width: 1em;

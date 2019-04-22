@@ -2,8 +2,11 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
+const tasksRoutes = require("./routes/tasks");
 const postsRoutes = require("./routes/posts");
 const userRoutes = require("./routes/user");
+const bookmarksRoutes = require("./routes/bookmarks");
+const desktopsRoutes = require("./routes/desktops");
 
 const app = express();
 
@@ -38,8 +41,10 @@ app.use((req, res, next) => {
   );
   next();
 })
-
+app.use("/api/tasks", tasksRoutes);
 app.use("/api/posts", postsRoutes);
 app.use("/api/user", userRoutes);
+app.use("/api/bookmarks", bookmarksRoutes);
+app.use("/api/desktops", desktopsRoutes);
 
 module.exports = app;

@@ -1,0 +1,19 @@
+/*
+ *  STYLE 1
+ */
+
+ *::-webkit-scrollbar-track
+ {
+     border-radius: 4px;
+ }
+ 
+ *::-webkit-scrollbar
+ {
+     width: 4px;
+ }
+ 
+*::-webkit-scrollbar-thumb
+ {
+     border-radius: 4px;
+     background-color: #c3c3c3;
+ }

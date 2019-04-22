@@ -1,0 +1,10 @@
+<section class="module tasks-wrapper">
+  <div class="module-header">
+    <span class="module-title tasks-title">Tasks</span>
+    <div class="module-actions">
+      <button (click)="toggleCreate()"><mat-icon>add</mat-icon></button>
+    </div>
+  </div>
+  <app-task-create *ngIf="createTask"></app-task-create>
+  <app-task-list></app-task-list>
+</section>

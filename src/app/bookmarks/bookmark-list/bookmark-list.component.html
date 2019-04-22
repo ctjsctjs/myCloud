@@ -1,0 +1,12 @@
+<div class="grid">
+    <div class="bookmark" *ngFor="let bookmark of bookmarks">
+        <a href="{{bookmark.url}}" target="_blank"></a>
+        <span class="bookmark-favicon">
+            <mat-icon>add_to_queue</mat-icon>
+        </span>
+        <span class="bookmark-delete" (click)="deleteBookmark(bookmark.id)">
+            <mat-icon>clear</mat-icon>
+        </span>
+        <span class="bookmark-name">{{bookmark.name}}</span>
+    </div>
+</div>

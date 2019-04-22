@@ -9,7 +9,8 @@ import {
   MatButtonModule,
   MatToolbarModule,
   MatExpansionModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatIconModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -22,6 +23,14 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { AuthInterceptor } from './auth/auth-interceptor';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
+import { SidenavComponent } from './dashboard/sidenav/sidenav.component';
+import { TasksComponent } from './tasks/tasks.component';
+import { TaskCreateComponent } from './tasks/task-create/task-create.component';
+import { TaskListComponent } from './tasks/task-list/task-list.component';
+import { NewsComponent } from './news/news.component';
+import { BookmarksComponent } from './bookmarks/bookmarks.component';
+import { BookmarkListComponent } from './bookmarks/bookmark-list/bookmark-list.component';
+import { BookmarkCreateComponent } from './bookmarks/bookmark-create/bookmark-create.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +42,14 @@ import { HomeComponent } from './home/home.component';
     SignupComponent,
     DashboardComponent,
     HomeComponent,
+    SidenavComponent,
+    TasksComponent,
+    TaskCreateComponent,
+    TaskListComponent,
+    NewsComponent,
+    BookmarksComponent,
+    BookmarkListComponent,
+    BookmarkCreateComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,7 +62,8 @@ import { HomeComponent } from './home/home.component';
     MatToolbarModule,
     MatExpansionModule,
     MatProgressSpinnerModule,
-    HttpClientModule
+    HttpClientModule,
+    MatIconModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi:true }

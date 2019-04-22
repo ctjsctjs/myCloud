@@ -1,0 +1,11 @@
+<section class="module tasks-wrapper">
+  <div class="module-header">
+    <span class="module-title tasks-title">Desktop</span>
+    <div class="module-actions">
+      <button (click)="toggleCreate()"><mat-icon>add</mat-icon></button>
+    </div>
+  </div>
+  <app-bookmark-create *ngIf="createBookmark"></app-bookmark-create>
+  <app-bookmark-list></app-bookmark-list>
+
+</section>

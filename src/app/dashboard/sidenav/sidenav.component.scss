@@ -1,0 +1,48 @@
+@import "../../../scss/main.scss";
+
+nav {
+    position: fixed;
+    height:100%;
+    background-color: $white;
+    left:0;
+    top:0;
+    width:60px;
+    z-index: 10;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+ul li {
+    position: relative;
+    color:  #efefef;
+    transition: 100ms ease-out;
+    border-left: 0px solid $salmon;
+    
+}
+
+ul li:hover {
+    border-left: 3px solid $salmon;
+    transition: 100ms ease-out;
+}
+
+ul li a {
+    display:block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    padding: 1em 0;
+}
+
+
+ul li a mat-icon{
+    font-size: 1em;
+    color:$mirage;
+}
+

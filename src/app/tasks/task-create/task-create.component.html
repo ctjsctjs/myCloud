@@ -1,0 +1,10 @@
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<div class="task-create-container">
+  <form (submit)="onSaveTask(postForm)" #postForm="ngForm" *ngIf="!isLoading">
+    <input placeholder="Add content" type="text" name="content" [ngModel]="task?.content" required #content="ngModel">
+    <!-- <span *ngIf="content.invalid">Please enter a valid content</span> -->
+    <button type="submit">
+      <mat-icon>add</mat-icon>
+    </button>
+  </form>
+</div>

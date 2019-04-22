@@ -1,0 +1,25 @@
+@import "../../scss/main.scss";
+
+.news-card{
+    padding: 1em;
+    text-align: left;
+    border-bottom: 1px solid #efefef;
+}
+
+.news-title{
+    display:block;
+    font-size:1em;
+    margin-bottom: 1em;
+    text-decoration: none;
+    color:#525252;
+    font-weight: 700;
+
+    &:hover{
+        color:#121212;
+    }
+}
+
+.news-body{
+    font-size:0.9em;
+    color:#525252;
+}

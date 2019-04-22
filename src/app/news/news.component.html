@@ -1,0 +1,19 @@
+<section class="module tasks-wrapper">
+  <div class="module-header">
+    <span class="module-title tasks-title">News</span>
+    <div class="module-actions">
+      <!-- <button>
+        <mat-icon>add</mat-icon>
+      </button>
+      <button>
+        <mat-icon>edit</mat-icon>
+      </button> -->
+    </div>
+  </div>
+  <div *ngFor="let article of news">
+    <div class="news-card">
+      <a class="news-title" href="{{article.url}}" target="_blank">{{article.title}}</a>
+      <div class="news-body">{{article.description}}</div>
+    </div>
+  </div>
+</section>

@@ -1,13 +1,10 @@
-<mat-spinner *ngIf="isLoading"></mat-spinner>
+<!-- <mat-spinner *ngIf="isLoading"></mat-spinner>
 <mat-accordion multi="true" *ngIf="posts.length > 0 && !isLoading">
   <mat-expansion-panel *ngFor="let post of posts">
     <mat-expansion-panel-header>
       <mat-panel-title>
         {{post.title}}
       </mat-panel-title>
-      <!-- <mat-panel-description>
-        {{post.id}}
-      </mat-panel-description> -->
     </mat-expansion-panel-header>
     {{post.content}}
     <mat-action-row *ngIf="userIsAuthenticated">
@@ -16,4 +13,22 @@
     </mat-action-row>
   </mat-expansion-panel>
 </mat-accordion>
-<p class="info-text mat-body-1" *ngIf="posts.length <= 0 && !isLoading">No Posts</p>
+<p class="info-text mat-body-1" *ngIf="posts.length <= 0 && !isLoading">No Posts</p> -->
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<section class="msgList-cont" *ngIf="posts.length > 0 && !isLoading">
+  <div class="msg-cont" *ngFor="let post of posts">
+    <div class="row">
+      <div class="msgTitle-cont">
+        <span class="msg-title">{{post.title}}</span>
+      </div>
+      <div class="msgAction-cont">
+        <a [routerLink]="['/edit', post.id]" color="primary"><mat-icon>edit</mat-icon></a>
+        <a (click)="onDelete(post.id)"><mat-icon>delete</mat-icon></a>
+      </div>
+    </div>
+    <div class="msgBody-cont">
+      <p class="msgBody">{{post.content}}</p>
+    </div>
+  </div>
+</section>
+<p class="noPost-error" *ngIf="posts.length <= 0 && !isLoading">No Posts</p>

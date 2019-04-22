@@ -1,0 +1,46 @@
+<!-- 
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
+    <form (submit)="onSaveBookmark(postForm)" #postForm="ngForm" *ngIf="!isLoading">  
+    <mat-form-field class="example-full-width">
+        <textarea
+        matInput placeholder="Name"
+        type="text"
+        name="name"
+        [ngModel]="bookmark?.name"
+        required
+        #content="ngModel">
+      </textarea>
+      <mat-error *ngIf="content.invalid">
+        Please enter a valid content
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <textarea
+      matInput placeholder="URL"
+      type="text"
+      name="url"
+      [ngModel]="bookmark?.url"
+      required
+      #content="ngModel">
+    </textarea>
+    <mat-error *ngIf="content.invalid">
+      Please enter a valid content
+    </mat-error>
+  </mat-form-field>
+    <button
+    mat-raised-button
+    color="accent"
+    type="submit">Save</button>
+  </form>
+   -->
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<div class="bookmark-create-container">
+  <form (submit)="onSaveBookmark(postForm)" #postForm="ngForm" *ngIf="!isLoading">
+    <input placeholder="File Name" type="text" name="name" [ngModel]="bookmark?.name" required #content="ngModel">
+    <input placeholder="URL" type="text" name="url" [ngModel]="bookmark?.url" required #content="ngModel">
+    <!-- <span *ngIf="content.invalid">Please enter a valid content</span> -->
+    <button type="submit">
+      <mat-icon>add</mat-icon>
+    </button>
+  </form>
+</div>
